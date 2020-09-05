@@ -14,7 +14,11 @@ public class MoverScript : MonoBehaviour
         var myInput = speed * Time.deltaTime * Input.GetAxis("Vertical");
         var urInput = speed * Time.deltaTime * Input.GetAxis("Horizontal");
         
-        transform.Translate(myInput, urInput, 0);
+        transform.Translate(urInput, myInput, 0);
     }
-    
+
+    public void Up()
+    {
+        transform.Translate(0,speed, 0);
+    }
 }
